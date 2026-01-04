@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 session_start();
 $root = dirname($_SERVER['SCRIPT_NAME']);
 $root = str_replace('\\', '/', $root);
@@ -12,10 +13,13 @@ if ($root === '/') {
 
 define('BASE_URL', $root);
 
+=======
+>>>>>>> 2fe65811f3f8c87bcd646745bd119189c3e7b48b
 require dirname(__DIR__) . '/vendor/autoload.php';
 
 use Mini\Core\Router;
 
+<<<<<<< HEAD
 //Table des routes minimaliste
 $routes = [
     ['GET', '/', [Mini\Controllers\HomeController::class, 'index']],
@@ -38,6 +42,12 @@ $routes = [
 
     ['GET', '/commande', [Mini\Controllers\PanierController::class, 'recap']],
     ['POST', '/commande/valider', [Mini\Controllers\PanierController::class, 'valider']],
+=======
+// Table des routes minimaliste
+$routes = [
+    ['GET', '/', [Mini\Controllers\HomeController::class, 'index']],
+    ['GET', '/users', [Mini\Controllers\HomeController::class, 'users']],
+>>>>>>> 2fe65811f3f8c87bcd646745bd119189c3e7b48b
 ];
 
 // Bootstrap du router

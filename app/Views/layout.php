@@ -16,6 +16,7 @@
 <header>
     <!-- Affiche le titre principal avec échappement -->
     <h1><?= isset($title) ? htmlspecialchars($title) : 'App' ?></h1>
+<<<<<<< HEAD
 
     <nav style="background: #eee; padding: 10px; margin-bottom: 20px;">
     <a href="<?= BASE_URL ?>/">Accueil</a> | 
@@ -29,6 +30,8 @@
         <a href="<?= BASE_URL ?>/register">Inscription</a>
     <?php endif; ?>
     </nav>
+=======
+>>>>>>> 2fe65811f3f8c87bcd646745bd119189c3e7b48b
 </header>
 <!-- Zone de contenu principal -->
 <main>

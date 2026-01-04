@@ -2,10 +2,20 @@
 
 namespace Mini\Core;
 
+<<<<<<< HEAD
 
 class Model
 {
 
+=======
+// Modele de base : c'est la classe mère dont vont hériter TOUS les models
+// Cette classe n'est pas destinée à être instancié, mais seulement à être héritée
+class Model
+{
+    // Ici on veut éviter de répéter les propriétés présentes dans tous les Models
+    // On factorise dans la classe "parent" de tous les Models => donc ici meme CoreModel
+    // Les propriétés doivent être en protected car on veut pouvoir les utiliser dans les classe enfant (avant ça, elles etaient en private)
+>>>>>>> 2fe65811f3f8c87bcd646745bd119189c3e7b48b
 
     protected $id;
     protected $created_at;

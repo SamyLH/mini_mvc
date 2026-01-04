@@ -25,6 +25,7 @@ final class Router
     {
         // Extrait uniquement le chemin de l'URI
         $path = parse_url($uri, PHP_URL_PATH) ?? '/';
+<<<<<<< HEAD
         
         // 2. Récupère le dossier où se trouve index.php (ex: /serveur_web/projet/mini_mvc/public)
         $scriptName = dirname($_SERVER['SCRIPT_NAME']);
@@ -39,6 +40,8 @@ final class Router
         if ($path === '' || $path === false) {
             $path = '/';
         }
+=======
+>>>>>>> 2fe65811f3f8c87bcd646745bd119189c3e7b48b
 
         // Parcourt chaque route enregistrée
         foreach ($this->routes as [$routeMethod, $routePath, $handler]) {

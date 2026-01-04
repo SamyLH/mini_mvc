@@ -1,5 +1,8 @@
 RewriteEngine On
+<<<<<<< HEAD
 RewriteBase /serveur_web/projet/mini_mvc/public/
+=======
+>>>>>>> 2fe65811f3f8c87bcd646745bd119189c3e7b48b
 # Rediriger toutes les requêtes vers index.php (sauf fichiers existants)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

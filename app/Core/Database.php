@@ -21,7 +21,16 @@ class Database
         $configData = parse_ini_file(__DIR__ . '/../config.ini');
 
         try {
+<<<<<<< HEAD
             $this->dbh = new PDO('pgsql:host=localhost;port=5432;dbname=mini_mvc','postgres','todor');
+=======
+            $this->dbh = new PDO(
+                "mysql:host={$configData['DB_HOST']};dbname={$configData['DB_NAME']};charset=utf8",
+                $configData['DB_USERNAME'],
+                $configData['DB_PASSWORD'],
+                array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING) // Affiche les erreurs SQL à l'écran
+            );
+>>>>>>> 2fe65811f3f8c87bcd646745bd119189c3e7b48b
         } catch (\Exception $exception) {
             echo 'Erreur de connexion...<br>';
             echo $exception->getMessage() . '<br>';
